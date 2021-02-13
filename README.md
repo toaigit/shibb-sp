@@ -1,2 +1,3 @@
-# shibb-sp
-Apache with Shibboleth For SAML authentication
+# shibb-and-perl
+Simple Apache with Shibb and Perl-CGI
+*  Please see README.toai for more detail

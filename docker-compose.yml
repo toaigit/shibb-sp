@@ -1,0 +1,22 @@
+version: '3.8'
+
+networks:
+  default:
+    external:
+      name: myappNET
+
+services:
+
+  shibb:
+        image: my1stapp
+        container_name: my1stapp
+        restart: always
+        ports:
+                - "80:80"
+                - "443:443"
+        volumes: 
+          - /home/toaivo/data/mysite/html:/var/www/html
+          - /home/toaivo/data/mysite/log/apache2:/var/log/apache2
+          - /home/toaivo/data/mysite/log/shibboleth:/var/log/shibboleth
+          - /home/toaivo/data/mysite/certs:/etc/apache2/certs
+          - /home/toaivo/data/mysite/cgi-bin:/etc/apache2/cgi-bin

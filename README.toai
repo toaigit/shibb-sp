@@ -1,6 +1,6 @@
 Update vars.env
     SITENAME - this is your website name such as mysite.abc123.com
-    DATADIR - this is the directory where you have all your files that you dont want to be in the docker image
+    DATADIR - this is the directory where you have all your files that you dont want to be in the docker image such as certificates.
     DOCKERIMAGE - this is the name of your docker image (docker image ls)
     CONTAINER - this is the name of your running container (run time)
     ACCTUID - this is the uid of your unix account when you startup your container.

@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 MAINTAINER Toai Vo <toaivo@stanford.edu>
 
 ARG USERUID
@@ -6,7 +6,7 @@ ARG USERUID
 RUN apt-get -qq update && \
     apt-get -qq -y --no-install-recommends install \
         apache2 \
-        libapache2-mod-shib2 && \
+        libapache2-mod-shib && \
     mkdir /etc/apache2/certs && \
     rm -rf /var/lib/apt/lists/*  && \
     a2enmod ssl && \

@@ -1,4 +1,0 @@
-#!/bin/bash
-export CURRENT_UID="$(id -u):$(id -g)"
-docker network create myappNET
-docker-compose -f docker-compose.yml up -d

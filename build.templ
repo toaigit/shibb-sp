@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
+. ./vars.env
 export USERUID={{.Env.ACCTUID}}
 echo "Setting USERID to $USERUID"
 echo "You need to change when you deploy on a different server"
 sleep 2
 docker network create {{.Env.NETWORK}}
 
-docker image build --network {{.Env.NETWORK}} --build-arg USERUID=$USERUID -t {{.Env.DOCKERIMAGE}} .
+#docker image build --network {{.Env.NETWORK}} --build-arg USERUID=$USERUID -t {{.Env.DOCKERIMAGE}} .
+docker image build --build-arg USERUID=$USERUID -t {{.Env.DOCKERIMAGE}} .
+
+cp -p files/apache/index.html {{.Env.DATADIR}}/html
+cp -p files/apache/index.html {{.Env.DATADIR}}/html/secure
 

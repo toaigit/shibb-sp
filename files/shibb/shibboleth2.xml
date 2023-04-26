@@ -7,7 +7,7 @@
    clockSkew="180">
 
   <ApplicationDefaults
-     entityID="https://mysite.abc123.com/"
+     entityID="https://mydemo.resourceonline.org/"
      REMOTE_USER="uid eppn">
      <Sessions
          lifetime="28800"
@@ -24,7 +24,7 @@
    </Sessions>
 
     <Errors
-      supportContact="as-psoft-infra@lists.stanford.edu"
+      supportContact="myteam@lists.stanford.edu"
       helpLocation="/about.html"
       styleSheet="/shibboleth-sp/main.css"/>
 

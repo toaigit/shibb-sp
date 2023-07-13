@@ -30,7 +30,7 @@
 -  Some vendors have the UI tool inside the application itself. You just need to follow their document to generate the metadata.xml file.  The tool will also require you to provide the IDP information as mentioned before.
 -  Once the SP metadata is generated, you can register this metadata to your IDP.
 ---
-## Example of the SP metadata.xml file
+## Example of an SP metadata.xml file
 ```
 <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mydemo.resourceonline.org/">
   <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">

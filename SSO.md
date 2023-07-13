@@ -1,12 +1,11 @@
-# Overview SSO SAML
-This is a quick overview of SAML SSO
+# Quick Overview of SSO SAML
 ---
 ## Terminologies:
 - Your application is a Service Provider (SP)
 - Stanford SSO is the Identity Provider (IDP).
 ---
 ## Requirements:
-- Your Application and Stanford SSO need to have some agreement understanding.
+- Your Application and Stanford SSO need to have some understandin agreements.
 - SP provides the information to IDP in the form of metadata.xml file.
 - This metadata.xml contains the information:
            SP IdentityID, Call-Back URL (ACS points), encrypted certificate
@@ -29,5 +28,5 @@ This is a quick overview of SAML SSO
 ## How do I obtain the application SP metadata.xml file?
 -  You should ask your third party vendor for this information.
 -  Some vendors have the UI tool inside the application itself. You just need to follow their document to generate the metadata.xml file.  The tool will also require you to provide the IDP information as mentioned before.
-
+-  Once the SP metadata is generated, you can register this metadata to your IDP.
 

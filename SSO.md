@@ -30,8 +30,9 @@
 -  Some vendors have the UI tool inside the application itself. You just need to follow their document to generate the metadata.xml file.  The tool will also require you to provide the IDP information as mentioned before.
 -  Once the SP metadata is generated, you can register this metadata to your IDP.
 ---
-## Examples of the SP metadata.xml file
-`<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mydemo.resourceonline.org/">
+## Example of the SP metadata.xml file
+```
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mydemo.resourceonline.org/">
   <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <md:Extensions>
       <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://mydemo.resourceonline.org/Shibboleth.sso/Login"/>
@@ -58,4 +59,4 @@ Do4y5ev50aPPJQsbe4u7z74D709rPWxE68y+S8RS7nTr
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mydemo.resourceonline.org/Shibboleth.sso/SAML2/POST" index="0"/>
   </md:SPSSODescriptor>
 </md:EntityDescriptor>
-`
+```

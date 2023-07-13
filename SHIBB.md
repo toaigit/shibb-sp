@@ -4,7 +4,7 @@
 -  Apache Shibboleth Module is an add-on to apache to protect a resource with SAML SSO.
 -  This takes a lot of work out of your application coding to support SAML authentication.
 -  This module requires shibd (daemon) running on the server.
--  The apache is used as a proxy server sitting in from of the application servers.
+-  The apache is used as a proxy server sitting in front of the application servers.
 ---  
 How to configure Apache Shibboleth module?
 -   There is two parts of the configurations - the server side shibd, and the apache itself.
@@ -14,7 +14,7 @@ How to configure shibd?
 -   Shibd configuration is under /etc/shibboleth folder.
 -   The main configuration files are shibboleth2.xml, attribute-mapping.xml.
 -   These configuration files specify the iDP that they will need to talk you, and how to map SAML attributes to the environment variables that you can use in your web application. 
--   see https://stanford.atlassian.net/wiki/spaces/IAMAN/pages/64946231/Shibboleth+SP+QuickStart
+-   See examples below.
 ---
 How to configure apache shibboleth?
 -    The main configuration files is the shibd.conf.

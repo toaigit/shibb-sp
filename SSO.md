@@ -60,3 +60,25 @@ Do4y5ev50aPPJQsbe4u7z74D709rPWxE68y+S8RS7nTr
   </md:SPSSODescriptor>
 </md:EntityDescriptor>
 ```
+---
+```
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="urn:amazon:cognito:sp:us-west-2_3TO67KAS9">
+  <md:SPSSODescriptor AuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509Certificate>MIICvDCCAaSg...bNB/ppEgP4tXJhOzoHZFRPk0=
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://myapp-name.us-west-2.amazoncognito.com/saml2/idpresponse" index="1"/>
+  </md:SPSSODescriptor>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>John</md:GivenName>
+    <md:SurName>Doe</md:SurName>
+    <md:EmailAddress>mailto:yourapp-admin-info@stanford.edu</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor>
+```

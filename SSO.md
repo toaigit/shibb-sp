@@ -32,10 +32,12 @@
 ---
 ## Example of an SP metadata.xml file
 ```
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mydemo.resourceonline.org/">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" 
+  entityID="https://mydemo.resourceonline.org/">
   <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <md:Extensions>
-      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://mydemo.resourceonline.org/Shibboleth.sso/Login"/>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" 
+      Location="https://mydemo.resourceonline.org/Shibboleth.sso/Login"/>
     </md:Extensions>
     <md:KeyDescriptor>
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
@@ -43,8 +45,6 @@
           <ds:X509Certificate>
 MIIDHTCCAgWgAwIBAgIUOgHAf3imn046q6I5UqZcc5htXDowDQYJKoZIhvcNAQEF
 BQAwJDEiMCAGA1UEAxMZbXlkZW1vLnJlc291cmNlb25saW5lLm9yZzAeFw0yMzA0
-MjYwMjA3MjBaFw0zMzA0MjMwMjA3MjBaMCQxIjAgBgNVBAMTGW15ZGVtby5yZXNv
-dXJjZW9ubGluZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC2
 gFRB9mr5czoMBF5Y8AswcyZ7JyLZ6VrfwdAJmUmDbBGIVH5Rn1n/2Iqgzb+Xv/sF
 9mcD1tEG9Vg6BXwxEunugpS4kEbFAJI8V5Kd/BmcQrQaaMqOR8SJBznQw00jvECV
 vFFDb1nerccqrZ9lGI8sbY4u4eDW/egiHCOtQhRdzEDOFt36q6JvOOcAX80HM1uY
@@ -56,13 +56,15 @@ Do4y5ev50aPPJQsbe4u7z74D709rPWxE68y+S8RS7nTr
         </ds:X509Data>
       </ds:KeyInfo>
     </md:KeyDescriptor>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mydemo.resourceonline.org/Shibboleth.sso/SAML2/POST" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+        Location="https://mydemo.resourceonline.org/Shibboleth.sso/SAML2/POST" index="0"/>
   </md:SPSSODescriptor>
 </md:EntityDescriptor>
 ```
 ---
 ```
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="urn:amazon:cognito:sp:us-west-2_3TO67KAS9">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+  entityID="urn:amazon:cognito:sp:us-west-2_3TO67KAS9">
   <md:SPSSODescriptor AuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <md:KeyDescriptor use="signing">
       <ds:KeyInfo>
@@ -73,7 +75,8 @@ Do4y5ev50aPPJQsbe4u7z74D709rPWxE68y+S8RS7nTr
       </ds:KeyInfo>
     </md:KeyDescriptor>
     <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://myapp-name.us-west-2.amazoncognito.com/saml2/idpresponse" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+       Location="https://myapp-name.us-west-2.amazoncognito.com/saml2/idpresponse" index="1"/>
   </md:SPSSODescriptor>
   <md:ContactPerson contactType="technical">
     <md:GivenName>John</md:GivenName>

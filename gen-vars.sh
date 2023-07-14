@@ -11,6 +11,7 @@ fi
 
 cd $CURRDIR
 cat startup.templ | gomplate > startup
+chmod 755 startup
 
 cat build.templ | gomplate > build.sh
 

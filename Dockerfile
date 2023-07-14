@@ -11,6 +11,7 @@ RUN apt-get -qq update && \
     rm -rf /var/lib/apt/lists/*  && \
     a2enmod ssl && \
     a2enmod cgi && \
+    a2enmod headers && \
     a2ensite default-ssl
 
 COPY files/apache/ports.conf /etc/apache2/ports.conf

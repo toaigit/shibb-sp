@@ -149,21 +149,20 @@
              Alias /shibboleth-sp/main.css /usr/share/shibboleth/main.css
        </IfModule>
 
-        
-       Alias /secure/ "/var/www/html/secure/"
-        
-       <Directory "/var/www/html/secure">
-          AllowOverride None
-          Options None
-          Order allow,deny
-          Allow from all
-       </Directory>
-
-       <Location /secure>
+       #  Required Authentication all except /public/ URI
+       <Location ~ "^((?!/public).)*$">
           AuthType shibboleth
           ShibRequestSetting requireSession 1
           Require valid-user
        </Location>
+        
+       Alias /public/ "/var/www/html/public/"
+        
+       <Directory "/var/www/html/public">
+          AllowOverride None
+          Options None
+	      Require all granted
+       </Directory>
 
        ScriptAlias /cgi/ /etc/apache2/cgi-bin/
        <Directory "/etc/apache2/cgi-bin">
@@ -171,12 +170,6 @@
 	   Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
 	   Require all granted
        </Directory>
-
-       <Location /cgi/>
-          AuthType shibboleth
-          ShibRequestSetting requireSession 1
-          Require valid-user
-       </Location>
 
 	</VirtualHost>
 </IfModule>
